@@ -1,0 +1,78 @@
+.section-introduction{
+    @include section;
+    
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        width: 70%;
+        margin: 0 auto;
+        overflow: overlay;
+    }
+
+    &__paragraph-wrapper {
+        width: 60%;
+    }
+
+    &__paragraph {
+        width: 100%; 
+        padding-bottom: 3%;
+        font-size: size(sm);
+    }
+
+    &__images-wrapper {
+        position: relative;
+        margin: 0 auto;
+        height: 12rem;
+        width: 25%; 
+        height: inherit;
+        box-shadow: 4px 4px 6px darken(color(third), 20%);
+        overflow: hidden;
+        border-radius: 3px;
+    }
+
+    &__image {
+        position: absolute;
+        width: 100%;
+        height: inherit;
+        opacity: 0;
+    }
+}
+
+.section-life {
+    @include section;
+
+    &__paragraph {
+        width: 70%;
+        margin: 0 auto;
+        font-size: size(sm);
+    }
+}
+
+.section-final-years {
+    @include section;
+    padding-bottom: 4%;
+
+    &__wrapper {
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    &__paragraph {
+        width: 100%;
+        font-size: size(sm);
+        margin-bottom: 3%;
+
+        &-wrapper {
+            width: 60%;
+        }
+    }
+
+    &__map {
+        width: 70%;
+        height: inherit;
+        margin: 0 0 0 5%;
+
+    }
+}

@@ -1,0 +1,57 @@
+.navigation {
+    height: 50px;
+    width: 100%;
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    background-color: lighten(color(third), 20%);
+
+    &__container {
+        height: inherit;
+        margin: 0 10%;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        background-color: color(third);
+        border-radius: 4px;
+        border: 1px solid color(first);
+        color: color(first);
+        font-size: size(md);
+    }
+
+    &__item {
+        @include nav-item;
+        @include nav-active;
+        &:hover {
+            background-color: darken(color(third), 10%);
+            position: relative;
+        }
+        &:hover .navigation__sub-menu {
+            display: block;
+            position: absolute;
+            top: 50px;
+            background-color: rgb(190, 190, 190);
+            border-top: 1px solid #fff;
+        }
+    }
+
+    &__sub-menu {
+        display: none;
+        width: 100%;
+        border: 1px solid color(first);
+    }
+
+    &__sub-item {
+        width: 100%;
+        transition: background-color .3s;
+        &:hover {
+            background-color: darken(color(third), 10%);
+        }
+    }
+
+    &__link {
+        @include no-outline;
+        text-decoration: none;
+        color: inherit;
+    }
+}

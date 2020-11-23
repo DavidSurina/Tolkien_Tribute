@@ -1,0 +1,32 @@
+.header {
+    height: 350px;
+    background-image: linear-gradient(rgba(0, 0, 0, .6) 10%, lighten(color(third), 20%)), url(hero2.jpg);
+    background-size: cover;
+    background-position: 0% 80%;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    display: flex;
+
+    &__tolkien-logo {
+        height: 150px;
+        width: 90px;
+        padding: 3% 0 0 3%;
+    }
+
+    &__wrapper {
+        width: 80%;
+    }
+
+    &__main-title {
+        height: 100px;
+        padding: 2% 0 0 3%;
+        color: color(first);
+        font-size: size(xxl);
+    }
+
+    &__sub-title {
+        height: 50px;
+        padding: 1.5% 0 0 3%;
+        color: color(first);
+        font-size: size(xl);
+    }
+}

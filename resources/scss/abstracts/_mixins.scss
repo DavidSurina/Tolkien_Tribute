@@ -1,0 +1,88 @@
+@mixin nav-active {
+    &--active {
+        background-color: darken(color(third), 40%);
+    }
+}
+
+@mixin nav-item {
+    width: 25%;
+    height: inherit;
+    font-size: size(md);
+    text-align: center;
+    font-family: 'Tenali Ramakrishna', sans-serif;
+    transition: background-color .3s, display .3s;
+}
+
+@mixin section {
+    box-sizing: border-box;
+    width: 100%;
+    max-height: 60rem;
+    padding: 4% 0 0 0;
+    font-family: "Montserrat", sans-serif;
+    color: darken(color(third), 40%);
+    background-color: lighten(color(third), 20%);
+
+    &__heading {
+        font-size: size(md);
+        width: 72%;
+        border-bottom: 1px solid darken(color(third), 40%);
+        margin: 2% auto;
+    }
+    @content;
+}
+
+@mixin no-outline {
+    &:active {
+        outline: 0;
+        -moz-outline-style: none;
+    }
+
+    &:focus {
+        outline: 0;
+        -moz-outline-style: none;
+    }
+    @content;
+}
+
+@mixin form-input-style {
+    width: 70%;
+    height: 2rem;
+    font-size: size(sm)*0.9;
+    margin: 0 auto 3% auto;
+    border: none; 
+    border-bottom: 1px solid color(first);
+    background-color: darken(color(third), 5%);
+    color: color(first);
+    transition: all .3s;
+
+    &:hover {
+        border-bottom: 1px solid darken(color(third), 20%);
+    }
+    @content;
+
+}
+
+@mixin introduction-image-style {
+    position: absolute;
+    width: 40%;
+    height: 225px;
+    border-top-right-radius: 40px;
+    border-bottom-left-radius: 40px;
+    transition: all .4s;
+
+    &:hover {
+        z-index: 100;
+        transform: scale(1.1);
+        opacity: .9;
+    }
+}
+
+@mixin hover-shadow {
+    transition: transform 0.2s, text-shadow 0.2s;
+
+    &:hover {
+        transform: scale(1.05);
+        text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+    }
+    @content;
+}

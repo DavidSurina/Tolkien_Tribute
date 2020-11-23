@@ -1,0 +1,12 @@
+{
+  "name": "martin_prve_zadanie_final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass -o resources/css resources/scss/main.scss -w"
+  },
+  "author": "David Surina",
+  "license": "ISC"
+}

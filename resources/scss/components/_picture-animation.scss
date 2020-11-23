@@ -1,0 +1,94 @@
+.first-slide {
+  animation: cycle 20s linear infinite;
+}
+
+.second-slide {
+  animation: cycletwo 20s linear infinite;
+}
+
+.third-slide {
+  animation: cyclethree 20s linear infinite;
+}
+
+.fourth-slide{
+  animation: cyclefour 20s linear infinite;
+}
+
+
+@keyframes cycle {
+    0% {
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    20% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes cycletwo {
+    0% {
+      opacity: 0;
+    }
+    25% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    45% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes cyclethree {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    55% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 1;
+    }
+    75% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes cyclefour {
+    0% {
+      opacity: 0;
+    }
+    75% {
+      opacity: 0;
+    }
+    80% {
+      opacity: 1;
+    }
+    95% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }

@@ -1,0 +1,74 @@
+.footer {
+    width: 100%;
+    height: 12em;
+    max-height: 500px;
+    background-color: color(third);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: color(first);
+    font-family: 'Tenali Ramakrishna', sans-serif;
+
+    &__nav {
+        width: 40%;
+        padding-top: 1%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+
+        &-item {
+            @include hover-shadow;
+        }
+    }
+
+    &__link {
+        @include no-outline;
+        text-decoration: none;
+        color: color(first);
+        font-size: size(md);
+    }
+
+    &__social {
+        width: 30%;
+        padding-top: 1%;
+        margin: 0 auto;
+        list-style: none;
+        display: flex;
+        justify-content: space-evenly;
+
+
+        &-item {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @include hover-shadow;
+        }
+
+        &-link {
+            width: inherit;
+            height: inherit;
+            text-decoration: none;
+            font-size: size(md);
+        }
+    }
+
+    &__copyright {
+        width: 35%;
+        padding-top: 1.5%;
+        margin: 0 auto;
+        text-align: center;
+        font-size: size(sm);
+    }
+}
+
+$socialMediaColors: 1 #3b5998, 2 #517fa4, 3 #dc4e41, 4 #b31217;
+
+@each $color in $socialMediaColors {
+    .footer__social-item:nth-child(#{nth($color, 1)}) .footer__social-link {
+        color: nth($color, 2);
+    };
+}
+
